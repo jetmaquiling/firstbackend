@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "goals",
   "info": {
-    "name": "goal",
-    "description": ""
+    "name": "goal"
   },
   "options": {
     "increments": true,
@@ -15,11 +14,13 @@
     "title": {
       "type": "string"
     },
-    "slug": {
-      "type": "uid"
+    "description": {
+      "type": "text"
     },
-    "Quill": {
-      "type": "richtext"
+    "user_has_many_goal": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "goals"
     }
   }
 }

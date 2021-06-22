@@ -59,9 +59,6 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "goals": {
-      "collection": "goal"
-    },
     "purpose": {
       "type": "text"
     },
@@ -70,6 +67,22 @@
     },
     "lastName": {
       "type": "string"
+    },
+    "identificationPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "goals": {
+      "via": "user_has_many_goal",
+      "collection": "goal"
     }
   }
 }
